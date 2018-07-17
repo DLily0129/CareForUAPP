@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/medName"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:text="未获取"
+        android:textColor="@color/black"
+        android:textSize="25sp"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="180dp"
+        android:layout_height="230dp"
+        android:layout_alignParentEnd="true"
+        app:srcCompat="@drawable/ic_dashboard_black_24dp" />
+
+    <TextView
+        android:id="@+id/medUse"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_alignStart="@+id/medName"
+        android:layout_below="@+id/medName"
+        android:layout_marginTop="20dp"
+        android:text="用法:"
+        android:textSize="18dp"/>
+
+    <Button
+        android:id="@+id/medNotice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/medUse"
+        android:layout_below="@+id/medUse"
+        android:layout_marginTop="20dp"
+        android:onClick="medNoticeClicked"
+        android:text="注意事项"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/medDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/medNotice"
+        android:layout_alignBottom="@+id/medNotice"
+        android:layout_alignEnd="@+id/medUse"
+        android:onClick="medDetailClicked"
+        android:text="详细信息"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_alignStart="@+id/medDetail"
+        android:layout_marginTop="20dp"
+        android:text="服药频率:"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/numOfDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3"
+        android:layout_marginStart="10dp"
+        android:textSize="16sp"
+        android:text="每" />
+
+    <Spinner
+        android:id="@+id/spinnerTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/numOfDay"
+        android:layout_toEndOf="@+id/numOfDay"/>
+
+    <NumberPicker
+        android:id="@+id/numOfTime"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/pickTime"
+        android:layout_toEndOf="@+id/spinnerTime" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/spinnerTime"
+        android:layout_toEndOf="@+id/numOfTime"
+        android:text="次"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="20dp"
+        android:text="起始时间:"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/pickTime"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignStart="@+id/numOfDay"
+        android:background="@color/gray"
+        android:onClick="timePickClicked"
+        android:text="8:00" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_below="@+id/textView5"
+        android:layout_marginTop="20dp"
+        android:text="间隔时间:"
+        android:textSize="16sp" />
+
+    <NumberPicker
+        android:id="@+id/spaceTime"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/per"
+        android:layout_alignStart="@+id/pickTime" />
+
+    <TextView
+        android:id="@+id/dOrh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView8"
+        android:layout_alignBottom="@+id/textView8"
+        android:layout_toEndOf="@+id/spaceTime"
+        android:text="小时"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView8"
+        android:layout_below="@id/textView8"
+        android:layout_marginTop="20dp"
+        android:text="每次用量:"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/perNum"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/spaceTime"
+        android:layout_below="@+id/spaceTime"
+        android:ems="10"
+        android:inputType="number"
+        android:text="1" />
+
+    <Spinner
+        android:id="@+id/per"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView10"
+        android:layout_toEndOf="@+id/perNum"/>
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView10"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_marginTop="20dp"
+        android:text="提醒方式:"
+        android:textSize="16sp" />
+
+    <Spinner
+        android:id="@+id/notMeth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView12"
+        android:layout_alignStart="@+id/perNum" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView11"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_marginTop="20dp"
+        android:text="提醒次数:"
+        android:textSize="16sp"/>
+
+    <NumberPicker
+        android:id="@+id/noticeTime"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:layout_alignStart="@+id/notMeth"
+        android:layout_below="@+id/notMeth"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/textView12"
+        android:layout_toEndOf="@+id/noticeTime"
+        android:text="次"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/checkPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="choicePostClicked"
+        android:text="确认提交"
+        android:textSize="20sp"/>
+
+</RelativeLayout>

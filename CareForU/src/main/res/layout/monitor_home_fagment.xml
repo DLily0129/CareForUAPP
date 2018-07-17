@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView android:src="@drawable/care"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="24dp"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/tv_pnc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="150dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="昵称"/>
+
+    <TextView
+        android:id="@+id/tv_pname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="150dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="姓名"/>
+
+
+    <TextView
+        android:id="@+id/tv_alert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="150dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="未按时服用警报" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_patientlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="180dp"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_input_add"
+        android:onClick="onAddPatientClicked"
+        app:backgroundTint="#5fcf80"
+        app:elevation="6dp"
+        app:fabSize="normal"
+        app:layout_anchor="@id/rv_patientlist"
+        app:layout_anchorGravity="bottom|center"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:pressedTranslationZ="8dp"
+        app:rippleColor="#ff87ffeb"
+        app:useCompatPadding="false"/>
+
+</android.support.design.widget.CoordinatorLayout>

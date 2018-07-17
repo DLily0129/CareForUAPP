@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">CareForU</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string-array name="spinnerTime_array">
+        <item>天</item>
+        <item>周</item>
+    </string-array>
+    <string-array name="per_array">
+        <item>片</item>
+        <item>包</item>
+        <item>mg</item>
+        <item>ml</item>
+    </string-array>
+    <string-array name="notMeth_array">
+        <item>铃声</item>
+        <item>震动</item>
+    </string-array>
+</resources>

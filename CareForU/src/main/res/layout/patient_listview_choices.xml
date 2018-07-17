@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:id="@+id/choiceName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:text="choiceName"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/choiceNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/choiceName"
+            android:layout_below="@+id/choiceName"
+            android:text="用量：每次choiceNum"
+            android:textColor="@color/black_overlay"/>
+
+        <CheckBox
+            android:id="@+id/choiceCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            android:text="未服用"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

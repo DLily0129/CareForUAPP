@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#5fcf80</color>
+
+
+    <color name="bg_login">#FF3300</color>
+    <color name="bg_register">#003300</color>
+    <color name="bg_main">#428bca</color>
+    <color name="input_login">#222222</color>
+    <color name="input_login_hint">#999999</color>
+    <color name="input_register">#222222</color>
+    <color name="input_register_bg">#ffffff</color>
+    <color name="input_register_hint">#5e6266</color>
+    <color name="btn_login">#FF3300</color>
+    <color name="btn_login_bg">#eceef1</color>
+    <color name="lbl_name">#333333</color>
+    <color name="btn_logut_bg">#ff6861</color>
+    <color name="genre">#666666</color>
+    <color name="year">#888888</color>
+    <color name="list_divider">#d9d9d9</color>
+    <color name="list_row_start_color">#ffffff</color>
+    <color name="list_row_end_color">#ffffff</color>
+    <color name="list_row_hover_start_color">#ebeef0</color>
+    <color name="list_row_hover_end_color">#ebeef0</color>
+    <color name="darkblue">#08088A</color>
+    <color name="grey">#F2F2F2</color>
+    <color name="blue1">#084B8A</color>
+    <color name="maroon">#610B0B</color>
+    <color name="app_background">#FFFFFF</color>
+    <color name="app_text">#535391</color>
+
+    <color name="actionbar_background">#FFFFFF</color>
+    <color name="actionbar_text">#535391</color>
+
+
+    <color name="chat_text_background">#D6D9FF</color>
+    <color name="chat_text_background_mine">#7980DB</color>
+    <color name="chat_text">#535391</color>
+
+
+    <color name="button_background">#535391</color>
+    <color name="button_text">#FFFFFF</color>
+
+    <!-- Generic colors -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="red">#F22613</color>
+    <color name="purple">#ac6fc7</color>
+    <color name="yellow">#F4D03F</color>
+    <color name="green">#26C281</color>
+    <color name="blue">#ff4cbef0</color>
+    <color name="gray">#CCCCCC</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="blueb">#008ee0</color>
+    <color name="greenb">#5fcf80</color>
+    <color name="greenc">#BDFCC9</color>
+    <color name="lemon">#f0aa7b</color>
+    <item name="visible" type="id"/>
+    <item name="masked" type="id"/>
+</resources>

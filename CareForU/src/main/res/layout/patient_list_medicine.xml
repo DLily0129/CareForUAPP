@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp">
+
+        <TextView
+            android:id="@+id/sicknessKind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/sicknessName"
+            android:text="疾病种类："
+            android:textColor="@color/black_overlay"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/sicknessName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/sicknessKind"
+            android:text="未获取"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/sicknessDegree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/radioGroup"
+            android:layout_marginTop="5dp"
+            android:text="疾病程度："
+            android:textColor="@color/black_overlay"
+            android:textSize="16sp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sicknessKind"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/sicknessDegree"
+            android:checkedButton="@+id/sicknessFree"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/sicknessFree"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="轻度" />
+
+            <RadioButton
+                android:id="@+id/sicknessHeavy"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="重度" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/recommend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/relativeLayout"
+        android:layout_marginTop="22dp"
+        android:src="@drawable/recommended" />
+
+    <ListView
+        android:id="@+id/listMedicine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_marginTop="120dp"
+        android:divider="@color/green"
+        android:dividerHeight="1dp" />
+</RelativeLayout>

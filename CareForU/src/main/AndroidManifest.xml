@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mybuttonview">
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <application
+        android:name=".AppController"
+        android:allowBackup="true"
+        android:icon="@drawable/title"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.Dark">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.Dark">
+        </activity>
+        <activity
+            android:name=".PatientMainActivity"
+            android:label="用药选择"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme.Light">
+        </activity>
+        <activity
+            android:name=".PatientActivityListMedicine"
+            android:label="药品推荐"
+            android:theme="@style/AppTheme.Light"
+            android:parentActivityName=".PatientMainActivity"/>
+        <activity
+            android:name=".PatientActivitySetPill"
+            android:label="用药设置"
+            android:theme="@style/AppTheme.Light"
+            android:parentActivityName=".PatientActivityListMedicine" />
+        <activity
+            android:name=".MonitorMainActivity"
+            android:label="病人管理"
+            android:theme="@style/AppTheme.Light">
+        </activity>
+        <activity
+            android:name=".MonitorPatientDetailActivity"
+            android:label="服药详情"
+            android:theme="@style/AppTheme.Light"
+            android:parentActivityName=".MonitorMainActivity">
+        </activity>
+        <service android:name=".LongRunningService"></service>
+        <receiver android:name=".AlarmReceiver"></receiver>
+    </application>
+
+</manifest>
